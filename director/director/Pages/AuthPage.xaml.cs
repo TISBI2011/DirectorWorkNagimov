@@ -34,6 +34,13 @@ namespace director.Pages
 
         private void BLogin_Click(object sender, RoutedEventArgs e)
         {
+            var user = App.DB.User.FirstOrDefault(u => u.Login == TBLogin.Text);
+            if (user == null || user.Password != TBPassword.Text)
+            {
+                MessageBox.Show("Неверный логин или пароль");
+                return;
+            }
+           
             NavigationService.Navigate(new KinoPage());
         }
     }

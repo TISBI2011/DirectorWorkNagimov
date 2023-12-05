@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using director.Moduls;
 
 namespace director.Pages
 {
@@ -20,14 +21,18 @@ namespace director.Pages
     /// </summary>
     public partial class RegPage : Page
     {
+        User contextUser;
         public RegPage()
         {
-            InitializeComponent();
+           
         }
 
         private void BRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            if (contextUser.Id == 0)
+                App.DB.User.Add(contextUser);
+            App.DB.SaveChanges();
+            NavigationService.GoBack();
         }
 
         
