@@ -9,7 +9,7 @@
       Title="KinoPage">
 
     <Grid>
-        <DataGrid>
+        <DataGrid x:Name="DGInfo" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Триллеры"/>
                 <DataGridTextColumn Header="Комедии"/>

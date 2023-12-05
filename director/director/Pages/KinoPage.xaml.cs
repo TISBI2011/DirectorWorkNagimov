@@ -23,6 +23,7 @@ namespace director.Pages
         public KinoPage()
         {
             InitializeComponent();
+            DGInfo.ItemsSource = App.DB.Film.ToList();
         }
     }
 }
