@@ -35,7 +35,7 @@
                     Content="Login"
                     Click="BLogin_Click"/>
 
-            <Button Margin="0,25,0,0" x:Name="BRegister" 
+            <Button Margin="0,1,0,0" x:Name="BRegister" 
                     Content="Register" 
                     Click="BRegister_Click"/>
         </StackPanel>

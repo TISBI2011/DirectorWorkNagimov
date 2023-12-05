@@ -29,7 +29,7 @@ namespace director.Pages
 
         private void BRegister_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RegPage());
+            NavigationService.Navigate(new RegPage(new User()));
         }
 
         private void BLogin_Click(object sender, RoutedEventArgs e)

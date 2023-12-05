@@ -22,9 +22,11 @@ namespace director.Pages
     public partial class RegPage : Page
     {
         User contextUser;
-        public RegPage()
+        public RegPage(User user)
         {
-           
+            InitializeComponent();
+            contextUser = user;
+            DataContext = contextUser;
         }
 
         private void BRegister_Click(object sender, RoutedEventArgs e)
